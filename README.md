@@ -58,4 +58,14 @@ This design ethos ensures that the wristwatch module is not only a functional ex
 
 ## Hardware - mechanics
 
+The 3D.CANE's mechanical structure, designed in Autodesk Inventor and realized through a combination of 3D printing and aluminum tubing, emphasizes practicality and user adaptability:
+
+1. **Cane Shaft:** Made from aluminum tubes for lightweight strength.
+2. **Magnetic Tip Attachment:** Allows for easy swapping of interchangeable tips to match different terrains.
+3. **Interchangeable Tips:** Varied designs cater to specific environmental needs.
+4. **Ultrasonic Sensor Housing:** Positioned at the cane's lower end for environmental scanning.
+5. **Wristwatch Module Casing:** Compact and ergonomic, houses the essential electronic components.
+
+This design strategy ensures the cane is both functional and adaptable, meeting the diverse needs of its users.
+
 
