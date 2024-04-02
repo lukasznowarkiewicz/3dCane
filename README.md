@@ -17,20 +17,20 @@ The core of the 3D.CANE system is built around two 8-bit AVR ATmega microcontrol
 ## Hardware - electronics - 3d.cane 
 
 ![Main PCB Assembled](imagesAndVideos/cane_main_PCB_assembled.JPG)
-[Main PCB Assembled Alternate View](imagesAndVideos/cane_main_pcb_assembled2.JPG)
+![Main PCB Assembled Alternate View](imagesAndVideos/cane_main_pcb_assembled2.JPG)
 
 
 1. **Power Supply Block:** Utilizes a 3.7V lithium-ion battery type 18650, paired with a compact TP4056 integrated circuit charger, enabling charging via an external adapter through a micro USB port on the handle casing.
 
 2. **Central Processing Unit (CPU):** Heart of the cane, featuring an 8-bit AVR microcontroller by Atmel based on a Reduced Instruction Set Computing (RISC) architecture. This unit, equipped with dual UART interfaces, facilitates programming and communication with the ultrasonic sensors, and possesses picoPower technology for energy efficiency.
 
-- ![Cane Main PCB](imagesAndVideos/cane_main_PCB.jpg)   
+![Cane Main PCB](imagesAndVideos/cane_main_PCB.jpg)   
 
 4. **Ultrasonic Sensor Block:** Employs three US-015 ultrasonic modules for a three-axis environmental scanner, which communicate via trig and echo lines to measure distances using 40 KHz sound waves, and calculates distance based on the time duration of the high state signal.
 
-- ![Ultrasonic Sensors](imagesAndVideos/ultrasonic_sensors.JPG)
-- ![Ultrasonic Sensors PCB](imagesAndVideos/ultrasonic_sensors_PCB.JPG)
-- ![Ultrasonic Sensors Prototyping](imagesAndVideos/ultrasonic_sensors_prototyping.JPG)
+![Ultrasonic Sensors](imagesAndVideos/ultrasonic_sensors.JPG)
+![Ultrasonic Sensors PCB](imagesAndVideos/ultrasonic_sensors_PCB.JPG)
+![Ultrasonic Sensors Prototyping](imagesAndVideos/ultrasonic_sensors_prototyping.JPG)
 
 4. **Logic Level Conversion Block:** Incorporates a 74LVC125 buffer/converter IC to accommodate devices requiring lower voltage levels than the microcontroller's 5V, including the microSD card, radio communication module, and accelerometer.
 
@@ -50,10 +50,10 @@ This system ensures a robust, interactive aid for visually impaired users, blend
 
 ## Hardware - electronics - watch
 
-- ![Wrist Watch PCB](imagesAndVideos/wrist_watch_PCB.jpg)
-- ![Wrist Watch PCB Assembled](imagesAndVideos/wrist_watch_pcb_assembled.JPG)
-- ![Wrist Watch PCB Assembled2](imagesAndVideos/wrist_watch_pcb_assembled2.JPG)
-- 
+![Wrist Watch PCB](imagesAndVideos/wrist_watch_PCB.jpg)
+![Wrist Watch PCB Assembled](imagesAndVideos/wrist_watch_pcb_assembled.JPG)
+![Wrist Watch PCB Assembled2](imagesAndVideos/wrist_watch_pcb_assembled2.JPG)
+
 The wristwatch module is an integral part of our design, functioning as a remote interface for the electronic cane, allowing users to trigger an alarm and access time through voice commands. This module, mirroring the electronic cane's hardware framework, is streamlined for wearable use and comprises seven main functional blocks:
 
 1. **Power Supply Block:** Unlike the cane, the watch uses a smaller, rechargeable YX-S1 battery tailored for smartwatches, featuring a 380mAh capacity and 3.7V nominal voltage with built-in short-circuit and under-voltage protection, ensuring safety and reliability.
@@ -75,7 +75,7 @@ This design ethos ensures that the wristwatch module is not only a functional ex
 
 ## Hardware - mechanics
 
-- ![3D Printing Watch](imagesAndVideos/3d_printing_watch.jpg)
+![3D Printing Watch](imagesAndVideos/3d_printing_watch.jpg)
 
 The 3D.CANE's mechanical structure, designed in Autodesk Inventor and realized through a combination of 3D printing and aluminum tubing, emphasizes practicality and user adaptability:
 
@@ -103,19 +103,15 @@ Given the fine traces and small component sizes, PCBs were produced using an LPK
 ### 3. Module Casing Fabrication
 Module casings for both the cane's handle and the wristwatch were prototyped using 3D printing technology, utilizing ABS and PET plastics for durability and lightweight design. This approach allowed for ergonomic and user-friendly designs to be tested and refined quickly.
 
-- ![3D Printer](imagesAndVideos/3d_printer.JPG)
-- ![3D Printer2](imagesAndVideos/3d_printer2.JPG)
-
-
+![3D Printer](imagesAndVideos/3d_printer.JPG)
+![3D Printer2](imagesAndVideos/3d_printer2.JPG)
 
 https://github.com/lukasznowarkiewicz/3dCane/assets/82212257/3fb58380-1fda-4e18-92d1-913e155af232
-
-
 
 ### 4. Programming and Module Testing
 The USBASP programmer was used for flashing the AVR microcontrollers, accommodating the different operating voltages (5V for the cane and 3.3V for the watch) without risking damage to the components. Each device's functionality, including RTC, wireless communication, and other subsystems, was individually verified before integrating them into the complete system.
 
-- ![Wrist Watch Testing](imagesAndVideos/wrist_watch_testing.jpg)
+![Wrist Watch Testing](imagesAndVideos/wrist_watch_testing.jpg)
 
 
 https://github.com/lukasznowarkiewicz/3dCane/assets/82212257/31495ac6-1cd3-4608-bdf9-e41c6840ae2c
@@ -130,13 +126,13 @@ Using the mkAVRcalculator software, the microcontrollers in both the cane and wa
 
 ## Summary, future work
 
-- ![Finished Product Cane1](imagesAndVideos/finished_product_cane1.JPG)
-- ![Finished Product Cane2](imagesAndVideos/finished_product_cane2.JPG)
-- ![Finished Product Wrist Watch](imagesAndVideos/finished_product_wrist_watch.JPG)
+![Finished Product Cane1](imagesAndVideos/finished_product_cane1.JPG)
+![Finished Product Cane2](imagesAndVideos/finished_product_cane2.JPG)
+![Finished Product Wrist Watch](imagesAndVideos/finished_product_wrist_watch.JPG)
 
-- ![Finished Product Presenting1](imagesAndVideos/finished_product_presenting1.JPG)
-- ![Finished Product Presenting2](imagesAndVideos/finished_product_presenting2.JPG)
-- ![Finished Product Presenting3](imagesAndVideos/finished_product_presenting3.JPG)
+![Finished Product Presenting1](imagesAndVideos/finished_product_presenting1.JPG)
+![Finished Product Presenting2](imagesAndVideos/finished_product_presenting2.JPG)
+![Finished Product Presenting3](imagesAndVideos/finished_product_presenting3.JPG)
 
 
 The conclusion of the 3D.CANE system development underscores both the achievements and the avenues for future improvements:
