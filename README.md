@@ -1,5 +1,6 @@
 # 3dCane
 
+![3D Cane in the field](imagesAndVideos/cane_in_the_field.JPG)
 
 ## Introduction
 In 2017, we, Jacek Martyniak and Łukasz Nowarkiewicz from the Electrical and Electronic School in Szczecin, under the guidance of our mentor with a PhD, Dariusz Mostowski, took on a project for the XVII Innovation and Invention Olympics. Our goal was simple: to design an intelligent electronic cane for the visually impaired and blind. This cane was intended to make navigating both outdoor city environments and indoor spaces easier for them. We focused on ensuring the cane was easy and intuitive to use, with a modular design that could be produced and maintained at a reasonable cost.
@@ -15,11 +16,21 @@ The core of the 3D.CANE system is built around two 8-bit AVR ATmega microcontrol
 
 ## Hardware - electronics - 3d.cane 
 
+![Main PCB Assembled](imagesAndVideos/cane_main_PCB_assembled.JPG)
+[Main PCB Assembled Alternate View](imagesAndVideos/cane_main_pcb_assembled2.JPG)
+
+
 1. **Power Supply Block:** Utilizes a 3.7V lithium-ion battery type 18650, paired with a compact TP4056 integrated circuit charger, enabling charging via an external adapter through a micro USB port on the handle casing.
 
 2. **Central Processing Unit (CPU):** Heart of the cane, featuring an 8-bit AVR microcontroller by Atmel based on a Reduced Instruction Set Computing (RISC) architecture. This unit, equipped with dual UART interfaces, facilitates programming and communication with the ultrasonic sensors, and possesses picoPower technology for energy efficiency.
 
-3. **Ultrasonic Sensor Block:** Employs three US-015 ultrasonic modules for a three-axis environmental scanner, which communicate via trig and echo lines to measure distances using 40 KHz sound waves, and calculates distance based on the time duration of the high state signal.
+- ![Cane Main PCB](imagesAndVideos/cane_main_PCB.jpg)   
+
+4. **Ultrasonic Sensor Block:** Employs three US-015 ultrasonic modules for a three-axis environmental scanner, which communicate via trig and echo lines to measure distances using 40 KHz sound waves, and calculates distance based on the time duration of the high state signal.
+
+- ![Ultrasonic Sensors](imagesAndVideos/ultrasonic_sensors.JPG)
+- ![Ultrasonic Sensors PCB](imagesAndVideos/ultrasonic_sensors_PCB.JPG)
+- ![Ultrasonic Sensors Prototyping](imagesAndVideos/ultrasonic_sensors_prototyping.JPG)
 
 4. **Logic Level Conversion Block:** Incorporates a 74LVC125 buffer/converter IC to accommodate devices requiring lower voltage levels than the microcontroller's 5V, including the microSD card, radio communication module, and accelerometer.
 
@@ -33,10 +44,16 @@ The core of the 3D.CANE system is built around two 8-bit AVR ATmega microcontrol
 
 9. **Vibration Motors Block:** Equipped with three vibration motors positioned to indicate obstacle directionality (left, right, or front) to the user, operating in pulsating or continuous modes based on obstacle proximity, powered directly without needing a voltage regulator due to calculated current requirements.
 
+![Vibration Motors](imagesAndVideos/vibration_motors.JPG)
+
 This system ensures a robust, interactive aid for visually impaired users, blending complex electronics and intuitive feedback mechanisms to enhance navigation and safety.
 
 ## Hardware - electronics - watch
 
+- ![Wrist Watch PCB](imagesAndVideos/wrist_watch_PCB.jpg)
+- ![Wrist Watch PCB Assembled](imagesAndVideos/wrist_watch_pcb_assembled.JPG)
+- ![Wrist Watch PCB Assembled2](imagesAndVideos/wrist_watch_pcb_assembled2.JPG)
+- 
 The wristwatch module is an integral part of our design, functioning as a remote interface for the electronic cane, allowing users to trigger an alarm and access time through voice commands. This module, mirroring the electronic cane's hardware framework, is streamlined for wearable use and comprises seven main functional blocks:
 
 1. **Power Supply Block:** Unlike the cane, the watch uses a smaller, rechargeable YX-S1 battery tailored for smartwatches, featuring a 380mAh capacity and 3.7V nominal voltage with built-in short-circuit and under-voltage protection, ensuring safety and reliability.
@@ -58,6 +75,8 @@ This design ethos ensures that the wristwatch module is not only a functional ex
 
 ## Hardware - mechanics
 
+- ![3D Printing Watch](imagesAndVideos/3d_printing_watch.jpg)
+
 The 3D.CANE's mechanical structure, designed in Autodesk Inventor and realized through a combination of 3D printing and aluminum tubing, emphasizes practicality and user adaptability:
 
 1. **Cane Shaft:** Made from aluminum tubes for lightweight strength.
@@ -71,6 +90,8 @@ This design strategy ensures the cane is both functional and adaptable, meeting 
 
 ## Prototyping and testing
 
+![Software Testing](imagesAndVideos/software_testing.jpg)
+
 The development and assembly of the 3D.CANE system involved a meticulous process of prototyping, circuit assembly, case fabrication, and thorough testing of components. 
 
 ### 1. System Concept Prototyping
@@ -82,8 +103,23 @@ Given the fine traces and small component sizes, PCBs were produced using an LPK
 ### 3. Module Casing Fabrication
 Module casings for both the cane's handle and the wristwatch were prototyped using 3D printing technology, utilizing ABS and PET plastics for durability and lightweight design. This approach allowed for ergonomic and user-friendly designs to be tested and refined quickly.
 
+- ![3D Printer](imagesAndVideos/3d_printer.JPG)
+- ![3D Printer2](imagesAndVideos/3d_printer2.JPG)
+
+
+
+https://github.com/lukasznowarkiewicz/3dCane/assets/82212257/3fb58380-1fda-4e18-92d1-913e155af232
+
+
+
 ### 4. Programming and Module Testing
 The USBASP programmer was used for flashing the AVR microcontrollers, accommodating the different operating voltages (5V for the cane and 3.3V for the watch) without risking damage to the components. Each device's functionality, including RTC, wireless communication, and other subsystems, was individually verified before integrating them into the complete system.
+
+- ![Wrist Watch Testing](imagesAndVideos/wrist_watch_testing.jpg)
+
+
+https://github.com/lukasznowarkiewicz/3dCane/assets/82212257/31495ac6-1cd3-4608-bdf9-e41c6840ae2c
+
 
 ### Assembly Challenges
 Assembling the wristwatch involved attaching charging connectors and magnets, soldering the battery and wiring, fitting the components into the casing, and securing the cover. Assembling the cane was more complex, requiring the aluminum structure assembly, sensor mounting, wiring, and integration of vibratory motors, speaker, and electronic components into the handle.
@@ -91,7 +127,17 @@ Assembling the wristwatch involved attaching charging connectors and magnets, so
 ### Testing and Finalization
 Using the mkAVRcalculator software, the microcontrollers in both the cane and watch were detected and programmed. After verifying the operation of individual modules like the RTC and wireless communication unit, the subsystems were integrated into their respective devices, culminating in the final assembly of fully functional prototypes.
 
+
 ## Summary, future work
+
+- ![Finished Product Cane1](imagesAndVideos/finished_product_cane1.JPG)
+- ![Finished Product Cane2](imagesAndVideos/finished_product_cane2.JPG)
+- ![Finished Product Wrist Watch](imagesAndVideos/finished_product_wrist_watch.JPG)
+
+- ![Finished Product Presenting1](imagesAndVideos/finished_product_presenting1.JPG)
+- ![Finished Product Presenting2](imagesAndVideos/finished_product_presenting2.JPG)
+- ![Finished Product Presenting3](imagesAndVideos/finished_product_presenting3.JPG)
+
 
 The conclusion of the 3D.CANE system development underscores both the achievements and the avenues for future improvements:
 
